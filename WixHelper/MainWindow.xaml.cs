@@ -28,9 +28,9 @@ namespace WixHelper
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        private string _folderPath = @"C:\git\VidyoIntegration\src\VidyoIntegration\Addin\VidyoAddin\bin\Release";
+        private string _folderPath;
         private string _output;
-        private string _pathPrefix = @"..\VidyoAddin\bin\Release\";
+        private string _pathPrefix;
 
 
         public string FolderPath
