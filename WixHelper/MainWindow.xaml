@@ -1,0 +1,20 @@
+﻿<Window x:Class="WixHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Name="TheWindow" Height="350" Width="525">
+    <DockPanel>
+        <DockPanel Dock="Top" Margin="2">
+            <Label DockPanel.Dock="Left" VerticalAlignment="Center">Source Folder:</Label>
+            <Button DockPanel.Dock="Right" VerticalAlignment="Center" Click="Browse_OnClick">Browse...</Button>
+            <TextBox VerticalAlignment="Center" Margin="2,0" Text="{Binding ElementName=TheWindow, Path=FolderPath}" />
+        </DockPanel>
+        <DockPanel Dock="Top" Margin="2">
+            <Label DockPanel.Dock="Left" VerticalAlignment="Center">Relative Path Prefix:</Label>
+            <TextBox VerticalAlignment="Center" Margin="2,0" Text="{Binding ElementName=TheWindow, Path=PathPrefix}" />
+        </DockPanel>
+        <Button DockPanel.Dock="Top" Margin="2" Click="Process_OnClick">PROCESS</Button>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Margin="2">
+            <TextBox TextWrapping="Wrap" Text="{Binding ElementName=TheWindow, Path=Output}" />
+        </ScrollViewer>
+    </DockPanel>
+</Window>
